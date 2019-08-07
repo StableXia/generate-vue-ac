@@ -1,0 +1,110 @@
+.#{$css-prefix}layout {
+	display: flex;
+	justify-content: flex-start;
+  align-items: stretch;
+
+  &--inline { display: inline-flex; }
+	&--column { flex-direction: column; }
+	&--row { flex-direction: row; }
+  &--center-items { align-items: center; }
+  &--start-items { align-items: flex-start; }
+  &--center-justify { justify-content: center; }
+  &--between-justify { justify-content: space-between; }
+  &--around-justify { justify-content: space-around; }
+  &--end-justify { justify-content: flex-end; }
+  &--start-justify { justify-content: flex-start; }
+  &--wrap { flex-wrap: wrap;}
+
+	&__flex {
+    flex: 1 1 0%;
+
+    /**
+     * By default, the minimal main sizes for flex items are set to `auto`, which means the flex
+     * items cannot shrink smaller past the size of its content, that in turn is not what we want
+     * when we use flexbox as precise layout method. However, this can be overrided by setting
+     * `min-width` and/or `min-height`, whose default values are `0` for regular element but `auto`
+     * for flex items:
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/min-width
+     * https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+     *
+     * Therefore, we by default override these values to 0, in order to keep the precise layout.
+     * But anytime when you think it is required to prevent content of flex item from overflow, you
+     * can simply add the `--auto-min-size` modifier to restore the spec default behavior.
+     */
+    min-width: 0px;
+    min-height: 0px;
+
+    &--auto-min-size {
+      min-width: auto;
+      min-height: auto;
+    }
+
+    &--with-hidden {
+      overflow: hidden;
+    }
+  }
+  &__flex-none { flex: none; }
+}
+
+/* should be used along with other .ac-layout to achieve more complex and normalized layout */
+.#{$css-prefix}layout-row {
+  /* be very careful with this if you plan to set position: relative; on this element */
+  &--with-hidden {
+    overflow: hidden;
+  }
+
+  & + & {
+    margin: $margin-primary 0 0 0;
+  }
+
+  &-small {
+    &--with-hidden {
+      overflow: hidden;
+    }
+
+    & + & {
+      margin: $margin-primary-small 0 0 0;
+    }
+  }
+
+  &-large {
+    &--with-hidden {
+      overflow: hidden;
+    }
+
+    & + & {
+      margin: $margin-primary-large 0 0 0;
+    }
+  }
+}
+
+.#{$css-prefix}layout-col {
+  /* be very careful with this if you plan to set position: relative; on this element */
+  &--with-hidden {
+    overflow: hidden;
+  }
+
+  & + & {
+    margin: 0 0 0 $margin-primary;
+  }
+
+  &-small {
+    &--with-hidden {
+      overflow: hidden;
+    }
+
+    & + & {
+      margin: 0 0 0 $margin-primary-small;
+    }
+  }
+
+  &-large {
+    &--with-hidden {
+      overflow: hidden;
+    }
+
+    & + & {
+      margin: 0 0 0 $margin-primary-large;
+    }
+  }
+}

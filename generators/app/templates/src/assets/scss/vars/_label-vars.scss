@@ -1,0 +1,5 @@
+$label-width-primary: 10px;
+
+@mixin label-width($size: 6) {
+  width: $label-width-primary*$size;
+}

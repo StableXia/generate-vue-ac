@@ -1,0 +1,16 @@
+$form-el-width: 10px;
+$form-el-width-primary: $form-el-width*18;
+$form-el-width-primary-small: $form-el-width*12;
+$form-el-width-primary-large: $form-el-width*24;
+
+$form-el-height: 2px;
+$form-el-height-primary: $form-el-height*16;
+$form-el-height-primary-small: $form-el-height*12;
+$form-el-height-primary-large: $form-el-height*18;
+
+@mixin form-width($size: 18) {
+  width: $form-el-width*$size;
+}
+@mixin form-height($size: 16) {
+  width: $form-el-height*$size;
+}

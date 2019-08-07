@@ -1,0 +1,49 @@
+.#{$css-prefix}typo-display1 {
+	font-size: $typo-display1-font-size;
+	font-weight: $typo-display1-font-weight;
+}
+.#{$css-prefix}typo-display2 {
+	font-size: $typo-display2-font-size;
+	font-weight: $typo-display2-font-weight;
+}
+.#{$css-prefix}typo-display3 {
+	font-size: $typo-display3-font-size;
+	font-weight: $typo-display3-font-weight;
+}
+.#{$css-prefix}typo-display4 {
+	font-size: $typo-display4-font-size;
+	font-weight: $typo-display4-font-weight;
+}
+.#{$css-prefix}typo-display5 {
+	font-size: $typo-display5-font-size;
+	font-weight: $typo-display5-font-weight;
+}
+.#{$css-prefix}typo-display6 {
+	font-size: $typo-display6-font-size;
+	font-weight: $typo-display6-font-weight;
+}
+.#{$css-prefix}typo-headline {
+	font-size: $typo-headline-font-size;
+	font-weight: $typo-headline-font-weight;
+}
+.#{$css-prefix}typo-title {
+	font-size: $typo-title-font-size;
+	font-weight: $typo-title-font-weight;
+}
+.#{$css-prefix}typo-sub-title {
+	font-size: $typo-sub-title-font-size;
+	font-weight: $typo-sub-title-font-weight;
+}
+.#{$css-prefix}typo-small-title {
+	font-size: $typo-small-title-font-size;
+	font-weight: $typo-small-title-font-weight;
+}
+.#{$css-prefix}typo-body {
+	font-size: $typo-body-font-size;
+	font-weight: $typo-body-font-weight;
+}
+
+html, body {
+	font-family: $typo-font-family;
+  	line-height: $typo-line-height;
+}

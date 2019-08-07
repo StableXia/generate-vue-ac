@@ -1,0 +1,11 @@
+.#{$css-prefix}indent {
+  padding-left: $padding-primary;
+
+  &-small {
+    padding-left: $padding-primary-small;
+  }
+
+  &-large {
+    padding-left: $padding-primary-large;
+  }
+}

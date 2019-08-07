@@ -1,0 +1,14 @@
+.#{$css-prefix}form-width-primary-xxxsmall { @include form-width(6);}
+.#{$css-prefix}form-width-primary-xxsmall { @include form-width(8);}
+.#{$css-prefix}form-width-primary-xsmall { @include form-width(10);}
+.#{$css-prefix}form-width-primary-small { @include form-width(12);}
+.#{$css-prefix}form-width-primary { @include form-width;}
+.#{$css-prefix}form-width-primary-large { @include form-width(24);}
+.#{$css-prefix}form-width-primary-xlarge { @include form-width(26);}
+.#{$css-prefix}form-width-primary-xxlarge { @include form-width(28);}
+.#{$css-prefix}form-width-primary-xxxlarge { @include form-width(30);}
+.#{$css-prefix}form-width-primary-xxxxlarge { @include form-width(40);}
+
+.#{$css-prefix}form-height-primary-small { @include form-height(12);}
+.#{$css-prefix}form-height-primary { @include form-height;}
+.#{$css-prefix}form-height-primary-large { @include form-height(18);}

@@ -1,0 +1,159 @@
+/* TODO: redefine all colors based on Ant Design */
+/* all theme-aware colors have the naming format $color--<theme>--xxx */
+/* The default is light theme now */
+
+/******************************************************************************
+ * colors regardless theme
+ *****************************************************************************/
+ $color-primary: #3379a3;
+ $color-primary-light: #3db8c1;
+ $color-primary-very-light: #cfedf0;
+ $color-primary-dark: #306c90;
+ $color-primary-very-dark: darken($color-primary-dark, 10%);
+ 
+ $color-primary-text: rgba(#fff, 1);
+ $color-primary-light-text: rgba(#fff, 1);
+ $color-primary-very-light-text: rgba(#000, 1);
+ $color-primary-dark-text: rgba(#fff, 1);
+ $color-primary-very-dark-text: rgba(#fff, 1);
+ 
+ /* functional colors */
+ $color-function-warning: #fe770b;
+ $color-function-success: #429162;
+ $color-function-error: #ff5330;
+ $color-function-info: #2db7f5;
+ 
+ $color-function-warning-text: rgba(#fff, 0.82);
+ $color-function-success-text: rgba(#fff, 0.82);
+ $color-function-error-text: rgba(#fff, 0.82);
+ $color-function-info-text: rgba(#fff, 0.82);
+ 
+ /******************************************************************************
+  * theme colors
+  *****************************************************************************/
+ /**====================================
+  * for light
+  **==================================*/
+ $color--light--background-mat: #fafafa;
+ $color--light--background-common: #fff;
+ $color--light--background-common-light: #fff;
+ $color--light--background-common-very-light: #fff;
+ $color--light--background-common-dark: darken($color--light--background-common, 5%);
+ $color--light--background-common-very-dark: darken($color--light--background-common, 10%);
+ $color--light--background-input: $color--light--background-common;
+ $color--light--background-input-disabled: $color--light--background-common-dark;
+ $color--light--background-highlight: rgba(#000, 0.05);
+ $color--light--border: #dddddd;
+ $color--light--divider: #efedec;
+ $color--light--shadow: #000;
+ 
+ $color--light--text: rgba(#000, 0.66);
+ $color--light--text-highlight: rgba(#000, 1);
+ $color--light--text-assist: lighten($color--light--text, 20%);
+ $color--light--text-disabled: lighten($color--light--text, 30%);
+ 
+ /**====================================
+  * for dark
+  **==================================*/
+ $color--dark--background-mat: #0c0c0c;
+ $color--dark--background-common: #222d31;
+ $color--dark--background-common-light: lighten($color--dark--background-common, 5%);
+ $color--dark--background-common-very-light: lighten($color--dark--background-common, 10%);
+ $color--dark--background-common-dark: darken($color--dark--background-common, 5%);
+ $color--dark--background-common-very-dark: darken($color--dark--background-common, 10%);
+ $color--dark--background-input: $color--dark--background-common-light;
+ $color--dark--background-input-disabled: darken($color--dark--background-common-light, 50%);
+ $color--dark--background-highlight: rgba(#fff, 0.1);
+ $color--dark--border: #222222;
+ $color--dark--divider: #363636;
+ $color--dark--shadow: #fff;
+ 
+ $color--dark--text: rgba(#fff, 0.66);
+ $color--dark--text-highlight: rgba(#fff, 1);
+ $color--dark--text-assist: darken($color--dark--text, 20%);
+ $color--dark--text-disabled: darken($color--dark--text, 30%);
+ 
+ /**====================================
+  * for translucent
+  **==================================*/
+ $color--trans--background-mat: #061b30;
+ $color--trans--background-common: rgba(#fff, 0.1);
+ $color--trans--background-common-light: transparentize($color--trans--background-common, 0.04);
+ $color--trans--background-common-very-light: transparentize($color--trans--background-common, 0.06);
+ $color--trans--background-common-dark: opacify($color--trans--background-common, 0.03);
+ $color--trans--background-common-very-dark: opacify($color--trans--background-common, 0.12);
+ $color--trans--background-common-opaque: rgba(#224f69, 1);
+ $color--trans--background-common-opaque-light: lighten($color--trans--background-common-opaque, 5%);
+ $color--trans--background-common-opaque-very-light: lighten($color--trans--background-common-opaque, 10%);
+ $color--trans--background-common-opaque-dark: darken($color--trans--background-common-opaque, 5%);
+ $color--trans--background-common-opaque-very-dark: darken($color--trans--background-common-opaque, 50%);
+ $color--trans--background-input: $color--trans--background-common-dark;
+ $color--trans--background-input-disabled: darken($color--trans--background-common-dark, 50%);
+ $color--trans--background-highlight: rgba(#fff, 0.1);
+ $color--trans--border: rgba(#dddddd, 0.35);
+ $color--trans--divider: rgba(#efedec, 0.35);
+ $color--trans--shadow: #fff;
+ 
+ $color--trans--text: rgba(#fff, 0.82);
+ $color--trans--text-highlight: rgba(#fff, 1);
+ $color--trans--text-assist: darken($color--trans--text, 20%);
+ $color--trans--text-disabled: darken($color--trans--text, 30%);
+ $color--trans--text-opaque: rgba(#fff, 0.44);
+ $color--trans--text-opaque-highlight: rgba(#fff, 1);
+ $color--trans--text-opaque-assist: darken($color--trans--text-opaque, 20%);
+ $color--trans--text-opaque-disabled: darken($color--trans--text-opaque, 30%);
+ 
+ /**====================================
+  * for translucent dark
+  **==================================*/
+ $color--trans-dark--background-common: rgba(#1c405a, 1);
+ $color--trans-dark--background-common-light: lighten($color--trans-dark--background-common, 5%);
+ $color--trans-dark--background-common-very-light: lighten($color--trans-dark--background-common, 10%);
+ $color--trans-dark--background-common-dark: darken($color--trans-dark--background-common, 5%);
+ $color--trans-dark--background-common-very-dark: darken($color--trans-dark--background-common, 10%);
+ $color--trans-dark--background-input: $color--trans-dark--background-common-light;
+ $color--trans-dark--background-input-disabled: darken($color--trans-dark--background-common-light, 50%);
+ $color--trans-dark--background-highlight: rgba(#fff, 0.1);
+ $color--trans-dark--border: darken($color--trans-dark--background-common, 80%);
+ $color--trans-dark--divider: darken($color--trans-dark--background-common, 70%);
+ $color--trans-dark--shadow: #fff;
+ 
+ $color--trans-dark--text: rgba(#fff, 0.66);
+ $color--trans-dark--text-highlight: rgba(#fff, 1);
+ $color--trans-dark--text-assist: darken($color--trans-dark--text, 20%);
+ $color--trans-dark--text-disabled: darken($color--trans-dark--text, 30%);
+ 
+ /******************************************************************************
+  * set the default to translucent theme...
+  *****************************************************************************/
+ $color-background-mat:  $color--light--background-mat;
+ 
+ $color-background-common:  $color--light--background-common;
+ $color-background-common-light: $color--trans--background-common-light;
+ $color-background-common-very-light: $color--trans--background-common-very-light;
+ $color-background-common-dark: $color--light--background-common-dark;
+ $color-background-common-very-dark: $color--trans--background-common-very-dark;
+ $color-background-common-opaque: $color--trans--background-common-opaque;
+ $color-background-common-opaque-light: $color--trans--background-common-opaque-light;
+ $color-background-common-opaque-very-light: $color--trans--background-common-opaque-very-light;
+ $color-background-common-opaque-dark: $color--trans--background-common-opaque-dark;
+ $color-background-common-opaque-very-dark: $color--trans--background-common-opaque-very-dark;
+ 
+ $color-background-highlight: $color--light--background-highlight;
+ 
+ $color-text: $color--light--text;
+ $color-text-highlight: $color--trans--text-highlight;
+ $color-text-assist: $color--trans--text-assist;
+ $color-text-disabled: $color--light--text-disabled;
+ $color-text-opaque: $color--trans--text-opaque;
+ $color-text-opaque-highlight: $color--trans--text-opaque-highlight;
+ $color-text-opaque-assist: $color--trans--text-opaque-assist;
+ $color-text-opaque-disabled: $color--trans--text-opaque-disabled;
+ 
+ $color-border: $color--light--border;
+ $color-divider: $color--light--divider;
+ $color-shadow: $color--light--shadow;
+ 
+ $color-background-input: $color--light--background-input;
+ $color-background-input-disabled: $color--light--background-input-disabled;
+ 

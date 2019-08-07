@@ -1,0 +1,27 @@
+.#{$css-prefix}label-width-primary-xxxsmall {
+  @include label-width(2);
+}
+.#{$css-prefix}label-width-primary-xxsmall {
+  @include label-width(3);
+}
+.#{$css-prefix}label-width-primary-xsmall {
+  @include label-width(4);
+}
+.#{$css-prefix}label-width-primary-small {
+  @include label-width(5);
+}
+.#{$css-prefix}label-width-primary {
+  @include label-width;
+}
+.#{$css-prefix}label-width-primary-large {
+  @include label-width(7);
+}
+.#{$css-prefix}label-width-primary-xlarge {
+  @include label-width(8);
+}
+.#{$css-prefix}label-width-primary-xxlarge {
+  @include label-width(9);
+}
+.#{$css-prefix}label-width-primary-xxxlarge {
+  @include label-width(10);
+}
