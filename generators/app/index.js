@@ -55,10 +55,8 @@ const DEV_DEPENDENCIES = [
 ]
 
 module.exports = class extends Generator {
-  // 获取当前项目状态，获取基本配置参数等
   initianlizing() {}
 
-  // 向用户展示交互式问题收集关键参数
   prompting() {
     this.log(
       yosay(`Welcome to the ace ${chalk.red('generator-react-ac')} generator!`)
@@ -117,17 +115,14 @@ module.exports = class extends Generator {
     })
   }
 
-  // 保存配置相关信息且生成配置文件（名称多为'.'开头的配置文件,例如.editorconfig）
   configuring() {
     this.destinationRoot(
       path.join(this.destinationRoot(), this.answer.answers.name)
     )
   }
 
-  // 未匹配任何生命周期方法的非私有方法均在此环节*自动*执行
   default() {}
 
-  // 依据模板进行新项目结构的写操作
   writing() {
     const { answers } = this.answer
 
@@ -181,10 +176,8 @@ module.exports = class extends Generator {
     )
   }
 
-  // 处理冲突(内部调用，一般不用处理）
   conflicts() {}
 
-  // 使用指定的包管理工具进行依赖安装(支持npm,bower,yarn)
   install() {
     const { answers } = this.answer
 
@@ -200,7 +193,6 @@ module.exports = class extends Generator {
     })
   }
 
-  // 结束动作，例如清屏，输出结束信息，say GoodBye等等
   end() {
     const { answers } = this.answer
 
