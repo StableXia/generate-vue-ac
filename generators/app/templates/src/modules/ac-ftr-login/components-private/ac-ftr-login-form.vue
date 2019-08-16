@@ -7,7 +7,7 @@
       class="ac-layout ac-layout--column ac-layout--center-items"
     >
       <Form-item>
-        <span class="ac-ftr-login-form__title ac-typo-display2">SSP后台管理系统</span>
+        <span class="ac-ftr-login-form__title ac-typo-display2">VUE AC</span>
       </Form-item>
       <Form-item prop="username">
         <Input
@@ -16,7 +16,7 @@
           v-model="formInline.username"
           placeholder="请输入用户名..."
         >
-          <Icon type="ios-person-outline" slot="prepend"></Icon>
+          <span slot="prepend">用 户</span>
         </Input>
       </Form-item>
 
@@ -27,7 +27,7 @@
           v-model="formInline.password"
           placeholder="请输入密码..."
         >
-          <Icon type="ios-locked-outline" slot="prepend"></Icon>
+          <span slot="prepend">密 码</span>
         </Input>
       </Form-item>
 

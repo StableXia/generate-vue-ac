@@ -2,12 +2,10 @@
 
 const AcApiConfig = {
 	dev: {
-		url: 'http://vega-dev.rongyi.com/',
-		analysisUrl: 'http://192.168.10.170:9002/api/',
+		url: '/',
 	},
 	build: {
-		url: 'http://vega.rongyi.com/',
-		analysisUrl: 'http://altair.rongyi.com/api/',
+		url: '/',
 	}
 };
 

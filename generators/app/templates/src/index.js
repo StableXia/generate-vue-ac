@@ -10,10 +10,10 @@ Vue.use(iView);
 
 import '@/assets/scss/main.scss';
 
-// Install ac-component
-import acComponent from '@/assets/ac-component/ac-component.js';
-import '@/assets/ac-component/styles/ac-component.css';
-Vue.use(acComponent);
+// Install iview-extensions
+import iviewExtensions from 'iview-extensions';
+import 'iview-extensions/lib/styles/iview-extensions.css';
+Vue.use(iviewExtensions);
 
 // Install shared component
 import sharedComponent from '@/shared';

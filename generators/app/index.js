@@ -6,6 +6,15 @@ const fs = require('fs')
 
 const DEPENDENCIES = [
   'axios',
+  'vue',
+  'vue-router',
+  'iview',
+  'vuex',
+  'iview-extensions',
+  'localforage'
+]
+
+const DEV_DEPENDENCIES = [
   'babel-helper-vue-jsx-merge-props',
   'babel-loader',
   'babel-plugin-syntax-jsx',
@@ -15,57 +24,34 @@ const DEPENDENCIES = [
   'babel-preset-es2015',
   'babel-preset-stage-2',
   'babel-register',
-  'clean-webpack-plugin',
   'cli-color',
+  'ora',
   'eslint',
   'eslint-plugin-react',
-  'extract-text-webpack-plugin',
-  'file-saver',
-  'friendly-errors-webpack-plugin',
-  'iview',
-  'lodash',
-  'node-sass',
-  'ora',
+  'husky',
+  'lint-staged',
   'script-loader',
-  'vue',
-  'vue-router',
-  'vue-template-compiler',
-  'webpack',
-  'webpack-cli',
-  'xlsx'
-]
-
-const DEV_DEPENDENCIES = [
-  'babel-polyfill',
-  'clipboard',
-  'copy-webpack-plugin',
-  'core-js',
   'css-loader',
-  'echarts',
   'file-loader',
-  'gulp',
-  'gulp-autoprefixer',
-  'gulp-clean-css',
-  'gulp-rename',
-  'gulp-sass',
-  'gulp-scss',
-  'highlightjs',
-  'html-webpack-plugin',
   'less',
   'less-loader',
-  'localforage',
-  'moment',
-  'popper.js',
-  'portfinder',
-  'qs',
+  'node-sass',
   'sass-loader',
   'style-loader',
   'url-loader',
   'vue-loader',
   'vue-style-loader',
-  'vuex',
+  'vue-template-compiler',
   'webpack-dev-server',
-  'webpack-merge'
+  'webpack',
+  'webpack-cli',
+  'webpack-merge',
+  'copy-webpack-plugin',
+  'html-webpack-plugin',
+  'clean-webpack-plugin',
+  'mini-css-extract-plugin',
+  'friendly-errors-webpack-plugin',
+  'portfinder'
 ]
 
 module.exports = class extends Generator {
@@ -106,18 +92,6 @@ module.exports = class extends Generator {
         default: true
       },
       {
-        type: 'confirm',
-        name: 'docker',
-        message: 'Use docker for release?',
-        default: true
-      },
-      {
-        type: 'confirm',
-        name: 'mobileOnly',
-        message: 'Is mobile only application?',
-        default: false
-      },
-      {
         type: 'list',
         name: 'npmOrYarn',
         message: 'Which tool would you use for dependencies?',
@@ -156,14 +130,11 @@ module.exports = class extends Generator {
   // 依据模板进行新项目结构的写操作
   writing() {
     const { answers } = this.answer
+
     this.fs.copy(this.templatePath('build'), this.destinationPath('build'))
     this.fs.copy(this.templatePath('config'), this.destinationPath('config'))
     this.fs.copy(this.templatePath('src'), this.destinationPath('src'))
     this.fs.copy(this.templatePath('static'), this.destinationPath('static'))
-    this.fs.copy(
-      this.templatePath('template-file'),
-      this.destinationPath('template-file')
-    )
 
     if (answers.vscode) {
       this.fs.copy(this.templatePath('vscode'), this.destinationPath('.vscode'))
@@ -180,7 +151,7 @@ module.exports = class extends Generator {
     )
     this.fs.copy(
       this.templatePath('eslintrc'),
-      this.destinationPath('.eslintrc')
+      this.destinationPath('.eslintrc.js')
     )
     this.fs.copy(
       this.templatePath('gitignore'),
@@ -194,6 +165,10 @@ module.exports = class extends Generator {
       this.templatePath('package.json.vm'),
       this.destinationPath('package.json'),
       this.answer
+    )
+    this.fs.copy(
+      this.templatePath('prettierrc'),
+      this.destinationPath('.prettierrc')
     )
     this.fs.copyTpl(
       this.templatePath('project.config.json.vm'),

@@ -1,13 +1,3 @@
-/*
- * File Created: 2018-09-29 10:22:24 am
- * Author: xiawen
- * -----
- * Last Modified: 2018-09-29 10:56:40 am
- * Modified By: xiawen
- * -----
- * Copyright (c) 2018 AC
- */
-
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
