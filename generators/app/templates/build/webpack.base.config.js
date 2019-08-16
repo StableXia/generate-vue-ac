@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 const path = require('path')
 const config = require('../config')
 const utilService = require('./util.service')

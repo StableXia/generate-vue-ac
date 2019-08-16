@@ -1,5 +1,3 @@
-/* eslint no-param-reassign: 0 */
-
 import Vue from 'vue';
 import { Message } from 'iview';
 import validateService from './validate.service';

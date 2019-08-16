@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import AcApiError, { AcApiErrorCode } from './ac-api-error.class';
 import AcApiAdapterAxios from './ac-api-adapter-axios.class';
 

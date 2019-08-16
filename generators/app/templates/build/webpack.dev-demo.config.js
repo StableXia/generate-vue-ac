@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 const path = require('path');
 const merge = require('webpack-merge');
 const base = require('./webpack.base.config.js');
