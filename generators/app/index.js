@@ -137,7 +137,7 @@ module.exports = class extends Generator {
 
     this.fs.copy(this.templatePath('babelrc'), this.destinationPath('.babelrc'))
     this.fs.copy(
-      this.templatePath('demo.html'),
+      this.templatePath('template.html'),
       this.destinationPath('demo.html')
     )
     this.fs.copy(
@@ -153,7 +153,7 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore')
     )
     this.fs.copy(
-      this.templatePath('index.html'),
+      this.templatePath('template.html'),
       this.destinationPath('index.html')
     )
     this.fs.copyTpl(
